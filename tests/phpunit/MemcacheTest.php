@@ -24,7 +24,9 @@ class MemcacheTest extends \PHPUnit\Framework\TestCase
         }
 
         $Memcache = new \Memcache;
-        $Memcache->connect('localhost', 11211) or die ("Could not connect");
+        if (!$Memcache->connect('localhost', 11211)) {
+            $this->markTestSkipped('Memcache server is not running.');
+        }
         $this->SimpleCache = new \Rundiz\SimpleCache\Drivers\Memcache($Memcache);
     }// setup
 

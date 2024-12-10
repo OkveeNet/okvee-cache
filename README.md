@@ -6,6 +6,8 @@ The simple and easy PHP cache drivers for cache any PHP data type. It is impleme
 [![License](https://poser.pugx.org/rundiz/simple-cache/license)](https://packagist.org/packages/rundiz/simple-cache)
 [![Total Downloads](https://poser.pugx.org/rundiz/simple-cache/downloads)](https://packagist.org/packages/rundiz/simple-cache)
 
+Tested up to PHP 8.4.
+
 ## Installation
 Make sure that you have [Composer](http://getcomposer.org/) installed and then run the following command.
 

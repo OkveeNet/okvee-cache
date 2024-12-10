@@ -7,7 +7,7 @@
 namespace Rundiz\SimpleCache\Tests;
 
 
-class MemcacheddTest extends \PHPUnit\Framework\TestCase
+class MemcachedTest extends \PHPUnit\Framework\TestCase
 {
 
 
@@ -24,7 +24,10 @@ class MemcacheddTest extends \PHPUnit\Framework\TestCase
         }
 
         $Memcached = new \Memcached;
-        $Memcached->addServer('localhost', 11211) or die ("Could not connect");
+        $Memcached->addServer('localhost', 11211);// can't check server is online from here, unlike memcache.
+        if (false === $Memcached->getStats()) {
+            $this->markTestSkipped('Memcache server is not running.');
+        }
         $this->SimpleCache = new \Rundiz\SimpleCache\Drivers\Memcached($Memcached);
     }// setup
 

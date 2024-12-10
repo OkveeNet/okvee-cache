@@ -19,7 +19,7 @@ class ApcuTest extends \PHPUnit\Framework\TestCase
 
     public function setup(): void
     {
-        if (!function_exists('apcu_fetch')) {
+        if (!function_exists('apcu_fetch') || !ini_get('apc.enabled')) {
             $this->markTestSkipped('APCu cache is not installed.');
         }
 
