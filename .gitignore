@@ -28,7 +28,7 @@ $RECYCLE.BIN/
 cache/
 cache/*
 # composer.json for development only.
-composer.json
+./composer.json
 # unit tests cache file.
 .phpunit.result.cache
 .phpunit.cache
