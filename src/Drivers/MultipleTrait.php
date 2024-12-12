@@ -46,7 +46,7 @@ trait MultipleTrait
     /**
      * {@inheritDoc}
      */
-    public function getMultiple($keys, $default = null)
+    public function getMultiple($keys, $default = null): \Traversable|array
     {
         if (!is_array($keys) && !$keys instanceof Traversable) {
             throw new InvalidArgumentException('keys must be either of type array or Traversable');

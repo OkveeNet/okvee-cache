@@ -59,7 +59,7 @@ class Memcache implements CacheInterface
     }// delete
 
 
-    public function get($key, $default = null)
+    public function get($key, $default = null): mixed
     {
         if (!is_string($key)) {
             throw new InvalidArgumentException('$key must be a string');
