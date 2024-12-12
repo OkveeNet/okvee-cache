@@ -11,13 +11,13 @@ namespace Rundiz\SimpleCache;
  * Rundiz SimpleCache
  * 
  * @since 3.0
- * @version 3.0.3
+ * @version 3.0.4
  */
 class SimpleCache
 {
 
 
-    const VERSION = '3.0.3';
+    const VERSION = '3.0.4';
 
 
 }
