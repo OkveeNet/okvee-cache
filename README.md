@@ -15,11 +15,6 @@ Make sure that you have [Composer](http://getcomposer.org/) installed and then r
 composer require rundiz/simple-cache
 ```
 
-### For development
-To install for development, clone this repository then copy **composer-fordevonly.json** to **composer.json** and check update packages using composer packages. 
-This is for prevent package dependencies conflict with the others while keep this package running on wider PHP versions.  
-The required packages on composer.json must not exists, only php version.
-
 ## Example
 We currently support APC, APCu, Memcache, Memcached, File system drivers. These are how to initialize for each driver class.
 
